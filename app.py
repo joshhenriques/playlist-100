@@ -5,9 +5,7 @@ import json
 import time
 import pandas as pd
 from dataProcessing import makeData
-
-cid = '813271a905464bdd8521413ab9037a84'
-secret = '5b9fc690517a4da9a00646653e23e8b3'
+from config import cid, secret
 
 app = Flask(__name__)
 
