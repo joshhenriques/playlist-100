@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script>
+        window.addEventListener( "pageshow", function ( event ) {
+        var historyTraversal = event.persisted || 
+                              ( typeof window.performance != "undefined" && 
+                                    window.performance.navigation.type === 2 );
+        if ( historyTraversal ) {
+          // Handle page restore.
+          window.location.reload();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+        <div class="container">
+            <h1>FIND 10 INTERNATIONAL SONGS THAT ALLIGN WITH YOUR TASTE</h1>  
+            <button id = 'button'
+            onclick=" this.style.visibility = 'hidden';
+            this.style.height = '0px';
+            this.style.width = '0px';
+            document.getElementById('roller').style.visibility = 'visible';
+            document.getElementById('roller').style.height = '80px';
+            document.getElementById('roller').style.width = '80px';
+            location.href = '{{url}}'; 
+           " >
+            Get Songs
+        </button>
+            <div id="roller" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <p>
+              The goal of this project was to help me find songs that align with my tastes despite
+              the nationality of the song and artist. This recommendation algorithm uses cosine similarity 
+              and genre filtering to determine the recommended songs. It was created using the spotify api,
+               scikit-learn, and flask.  
+
+            </p>
+          </div>
+        
+        
+    </main>
+  </body>
+</html>

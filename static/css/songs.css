@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: goldenrod;
+    background-image: url("/static/Images/galaxy.jpg");
+    background-size: cover;
+    color: rgb(179, 248, 253);
   }
 
 img{
@@ -10,12 +12,39 @@ img{
     width: 20vh;
 }
 
+h1{
+    width: 100vw;
+    text-align: center;
+}
 .container{
-    height: 95vh;
-    width: 95vw;
-    margin: 2.5%;
+    height: 90vh;
+    width: 94vw;
+    margin: 5vh 3vw 5vh 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 0vh;
+    column-gap: 5vw;
 }
 
 .songContainer{
+    height: 30vh;
+    width: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+}
 
+.title{
+    width: inherit;
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.artists{
+    margin-top: -2vh;
+    width: inherit;
+    text-align: center;
+    font-size: small;
 }
